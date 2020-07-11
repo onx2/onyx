@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <h1>{{ component.name }}</h1> -->
+    <h1>{{ component.name }}</h1>
     <section>
-      <!-- <component :is="component" /> -->
+      <component :is="component" />
       <!--
       @todo
         - render components based on each prop variation
@@ -18,9 +18,9 @@ import { defineComponent } from "vue"
 
 export default defineComponent({
   name: "Template",
-  // props: ["component"],
-  setup() {
-    // console.log(props.component)
+  props: ["component"],
+  setup(props) {
+    console.log(props.component)
     return {}
   }
 })

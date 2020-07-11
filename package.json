@@ -1,6 +1,21 @@
 {
-  "name": "vue3-component-library",
+  "name": "@onx2/onyx",
+  "description": "A component library built with Vue 3.x.",
   "version": "0.0.0-alpha.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:onx2/onyx.git"
+  },
+  "keywords": [
+    "Vue",
+    "Vue 3",
+    "Component",
+    "Library",
+    "TypeScript"
+  ],
   "license": "MIT",
   "author": {
     "name": "Jeff Rooks",
@@ -9,9 +24,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:docs": "node ./scripts/build-docs.js",
+    "build:components": "node ./scripts/build-components.js",
     "lint": "eslint --quiet --fix",
-    "serve": "serve -s dist"
+    "serve": "serve -s dist/components"
   },
   "peerDependencies": {
     "vue": "^3.0.0-beta.20",
