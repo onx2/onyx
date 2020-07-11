@@ -24,6 +24,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "build": "rm -rf ./dist; yarn build:docs; yarn build:components; mv ./packages/components ./dist/components/raw",
     "build:docs": "node ./scripts/build-docs.js",
     "build:components": "node ./scripts/build-components.js",
     "lint": "eslint --quiet --fix",
