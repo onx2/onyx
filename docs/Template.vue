@@ -9,6 +9,7 @@
         - render api section 
         - render introduction to component
      -->
+      <div v-for="propEntry in Object.entries(component.props)" :key="propEntry">{{ propEntry[0] }} - {{ propEntry[1] }}</div>
     </section>
   </div>
 </template>
@@ -20,8 +21,12 @@ export default defineComponent({
   name: "Template",
   props: ["component"],
   setup(props) {
-    console.log(props.component)
-    return {}
+    const componentProps = Object.entries(props.component.props).map((entry) => ({
+      name: entry[0],
+      others: entry[1]
+    }))
+    console.log(componentProps)
+    return { componentProps }
   }
 })
 </script>

@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git@github.com:onx2/onyx.git"
   },
+  "module": "raw/index.js",
   "keywords": [
     "Vue",
     "Vue 3",
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf ./dist; yarn build:docs; yarn build:components; mv ./packages/components ./dist/components/raw",
+    "build": "rm -rf ./dist; yarn build:docs; yarn build:components;",
     "build:docs": "node ./scripts/build-docs.js",
     "build:components": "node ./scripts/build-components.js",
     "lint": "eslint --quiet --fix",
