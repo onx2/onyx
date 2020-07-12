@@ -1,8 +1,7 @@
 import { ComponentOptions } from "vue"
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHistory, RouteRecordRaw, Router } from "vue-router"
 import { kebabCase } from "lodash-es"
 import * as components from "../packages/components"
-import Template from "./Template.vue"
 
 const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/getting-started" },
@@ -10,12 +9,11 @@ const routes: RouteRecordRaw[] = [
   ...Object.values(components).map((component) => ({
     path: `/${kebabCase(component.name)}`,
     name: component.name,
-    component: Template,
-    props: { component }
+    component: (): Promise<ComponentOptions> => import(`../packages/components/${component.name}/${component.name}.docs.vue`)
   }))
 ]
-console.log(routes)
-export const router = createRouter({
+
+export const router: Router = createRouter({
   history: createWebHistory(),
   routes
 })

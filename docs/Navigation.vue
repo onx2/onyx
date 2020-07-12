@@ -4,7 +4,7 @@
       <router-link to="/getting-started">Getting Started</router-link>
     </li>
     <li v-for="component in { ...components }" :key="component.name">
-      <router-link :to="kebabCase(component.name)">{{ component.name }}</router-link>
+      <router-link :to="`/${kebabCase(component.name)}`">{{ component.name }}</router-link>
     </li>
   </nav>
 </template>
