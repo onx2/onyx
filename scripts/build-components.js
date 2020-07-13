@@ -8,7 +8,7 @@ const { build } = require("vite")
     outDir: "dist/components",
     rollupInputOptions: {
       // https://rollupjs.org/guide/en/#big-list-of-options
-      input: "packages/components/index.ts",
+      input: "src/components/index.ts",
       external: ["vue", "vue-router"]
     },
     rollupOutputOptions: {
