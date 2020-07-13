@@ -1,5 +1,5 @@
 import { defineComponent, h } from "vue"
-import "./styles.css"
+import "./styles.scss"
 
 export default defineComponent({
   name: "OnyxSurfaceFooter",

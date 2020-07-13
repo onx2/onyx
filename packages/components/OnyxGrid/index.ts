@@ -1,10 +1,23 @@
 import { defineComponent, h } from "vue"
-import "./styles.css"
+import "./styles.scss"
+
+export namespace OnyxGirdRow {
+  export type Props = {
+    tag?: "div" | "main" | "section"
+  }
+}
 
 export default defineComponent({
   name: "OnyxGrid",
-  props: {},
-  render() {
-    return h("div", { class: { grid: true } }, this.$slots)
+  props: {
+    tag: {
+      type: String,
+      default: "div"
+    }
+  },
+  render(props) {
+    const { tag } = props
+
+    return h(tag, { class: { grid: true } }, this.$slots)
   }
 })

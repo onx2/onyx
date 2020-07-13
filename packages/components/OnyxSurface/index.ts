@@ -1,12 +1,21 @@
 import { defineComponent, h, mergeProps } from "vue"
-import "./styles.css"
+import "./styles.scss"
+
+export namespace OnyxSurface {
+  export type Props = {
+    rounded?: boolean
+    fill?: boolean
+    width?: number
+    color?: "red" | "blue" | "default" | "green"
+  }
+}
 
 export default defineComponent({
   name: "OnyxSurface",
   props: {
     rounded: {
       type: Boolean,
-      default: false
+      default: true
     },
     fill: {
       type: Boolean,
@@ -16,17 +25,20 @@ export default defineComponent({
       type: Number
     },
     color: {
-      type: String as () => "red" | "blue" | "default" | "green"
+      type: String,
+      defualt: "default"
     }
   },
   render() {
+    const { color, fill, rounded, width } = this.$props as OnyxSurface.Props
+
     const child = h(
       "div",
       {
         class: {
           "surface-inner": true,
-          rounded: this.$props.rounded,
-          [this.$props.color]: this.$props.color
+          rounded,
+          [color]: color
         }
       },
       this.$slots
@@ -37,10 +49,10 @@ export default defineComponent({
       mergeProps(this.$props, {
         class: {
           surface: true,
-          fill: this.$props.fill
+          fill
         },
         style: {
-          width: this.$props.width ? `${this.$props.width}px` : undefined
+          width: width ? `${width}px` : undefined
         }
       }),
       child

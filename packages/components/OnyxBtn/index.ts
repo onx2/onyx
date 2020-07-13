@@ -1,6 +1,6 @@
 import { computed, defineComponent, h, mergeProps } from "vue"
 import { RouterLink } from "vue-router"
-import "./styles.css"
+import "./styles.scss"
 
 export namespace Button {
   export type Props = {
@@ -62,7 +62,7 @@ export default defineComponent({
       const classArray = [
         "button",
         `size-${size}`,
-        `color-${color}`,
+        `button-${color}`,
         `elevation-${elevation}`
       ]
 
