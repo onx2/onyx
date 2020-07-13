@@ -17,7 +17,7 @@
 import { defineComponent } from "vue"
 import { router } from "./router"
 import { kebabCase } from "lodash-es"
-import * as components from "../packages/components"
+import * as components from "../components"
 
 export default defineComponent({
   components: {},

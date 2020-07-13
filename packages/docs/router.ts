@@ -6,8 +6,8 @@ import {
   Router
 } from "vue-router"
 import { kebabCase } from "lodash-es"
-import * as components from "../packages/components"
-console.log(components)
+import * as components from "../components"
+
 const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/getting-started" },
   {
@@ -19,10 +19,10 @@ const routes: RouteRecordRaw[] = [
     path: `/${kebabCase(component.name)}`,
     name: component.name,
     component: (): Promise<ComponentOptions> =>
-      import(`../packages/components/${component.name}/docs.vue`)
+      import(`../components/${component.name}/docs.vue`)
   }))
 ]
-console.log(routes)
+
 export const router: Router = createRouter({
   history: createWebHistory(),
   routes
