@@ -1,0 +1,31 @@
+.surface {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  position: relative;
+}
+.surface-inner {
+  display: flex;
+  flex-direction: column;
+  border-color: #e3e3e3;
+  border-width: 1px;
+  border-style: solid;
+}
+.fill {
+  width: 100%;
+}
+.rounded {
+  border-radius: 4px;
+}
+.red {
+  border-color: #dc3545;
+}
+.default {
+  border-color: #6c757d;
+}
+.blue {
+  border-color: #2475c0;
+}
+.green {
+  border-color: #28a745;
+}

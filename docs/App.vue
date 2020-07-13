@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <navigation />
-    <main>
+    <main class="content">
       <router-view />
     </main>
   </div>
@@ -19,8 +19,14 @@ export default defineComponent({
 })
 </script>
 
-<style module>
+<style scoped>
 .wrapper {
   display: flex;
+  height: 100%;
+}
+.content {
+  margin-left: 200px;
+  padding: 8px;
+  width: 100%;
 }
 </style>
