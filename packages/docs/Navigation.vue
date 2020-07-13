@@ -38,7 +38,9 @@ nav {
   width: 200px;
   height: 100%;
   position: fixed;
-  border-right: 1px solid #f9f9f9;
+  border-right: 1px solid #e3e3e3;
+  background-color: #fff;
+  z-index: 10;
 }
 nav ul {
   list-style: none;
