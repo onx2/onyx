@@ -1,5 +1,5 @@
 <template>
-  <onyx-surface :width="400">
+  <onyx-surface>
     <onyx-surface-header>Header</onyx-surface-header>
     <onyx-surface-body>Body</onyx-surface-body>
     <onyx-surface-footer>Footer</onyx-surface-footer>

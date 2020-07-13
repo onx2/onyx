@@ -18,11 +18,14 @@ export default defineComponent({
     padding: {
       type: Number,
       default: 2
+    },
+    fill: {
+      type: Boolean
     }
   },
   render(props) {
-    const { tag } = props
+    const { fill, tag } = props
 
-    return h(tag, { class: { grid: true } }, this.$slots)
+    return h(tag, { class: { grid: true, fill } }, this.$slots)
   }
 })

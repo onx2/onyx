@@ -6,6 +6,17 @@ export default defineComponent({
   inheritAttrs: false,
   props: {},
   render() {
-    return h("div", { class: "surface-header" }, this.$slots)
+    return h(
+      "div",
+      {
+        class: {
+          "surface-header": true,
+          [this.$parent.color]: this.$parent.color,
+          rounded: this.$parent.rounded,
+          blurb: this.$parent.blurb
+        }
+      },
+      this.$slots
+    )
   }
 })

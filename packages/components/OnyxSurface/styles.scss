@@ -1,8 +1,15 @@
+@import "../../styles/generic/colors";
+
 .surface {
   display: inline-block;
   max-width: 100%;
   overflow-wrap: break-word;
   position: relative;
+
+  &.fill {
+    width: 100%;
+    display: block;
+  }
 
   .surface-inner {
     display: flex;
@@ -14,26 +21,21 @@
     &.rounded {
       border-radius: 4px;
     }
-  }
 
-  &.fill {
-    width: 100%;
-    display: block;
-  }
+    &.red {
+      border-color: lighten($color: $red, $amount: 32);
+    }
 
-  &.red {
-    border-color: #dc3545;
-  }
+    &.default {
+      border-color: lighten($color: $grey, $amount: 45);
+    }
 
-  &.default {
-    border-color: #6c757d;
-  }
+    &.blue {
+      border-color: lighten($color: $blue, $amount: 40);
+    }
 
-  &.blue {
-    border-color: #2475c0;
-  }
-
-  &.green {
-    border-color: #28a745;
+    &.green {
+      border-color: lighten($color: $green, $amount: 35);
+    }
   }
 }

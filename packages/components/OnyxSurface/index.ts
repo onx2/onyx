@@ -27,6 +27,9 @@ export default defineComponent({
     color: {
       type: String,
       defualt: "default"
+    },
+    blurb: {
+      type: Boolean
     }
   },
   render() {

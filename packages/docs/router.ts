@@ -8,7 +8,7 @@ import {
 import { kebabCase } from "lodash-es"
 import * as components from "../components"
 
-const routeExclusionList = [
+const componentExclusionList = [
   "OnyxSurfaceBody",
   "OnyxSurfaceFooter",
   "OnyxSurfaceHeader",
@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     name: "Getting Started"
   },
   ...Object.values(components)
-    .filter((component) => !routeExclusionList.includes(component.name))
+    .filter((component) => !componentExclusionList.includes(component.name))
     .map((component) => ({
       path: `/${kebabCase(component.name)}`,
       name: component.name,

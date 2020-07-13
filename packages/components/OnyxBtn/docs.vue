@@ -31,7 +31,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill>
+          <onyx-surface fill blurb>
             <onyx-surface-header>Disabled</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -56,7 +56,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill>
+          <onyx-surface fill color="green" blurb>
             <onyx-surface-header>Sizes</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -78,7 +78,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill>
+          <onyx-surface fill color="red" blurb>
             <onyx-surface-header>Colors</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -103,7 +103,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill>
+          <onyx-surface fill color="blue" blurb>
             <onyx-surface-header>Fab</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -119,6 +119,9 @@
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn fab color="green">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab color="green">Iasdfasdfas</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>

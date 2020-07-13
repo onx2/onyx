@@ -1,3 +1,5 @@
+@import "../../styles/generic/colors";
+
 .surface-header {
   display: flex;
   justify-content: space-between;
@@ -6,7 +8,40 @@
   background-color: #f9f9f9;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: inherit;
-  border-top-right-radius: inherit;
-  border-top-left-radius: inherit;
+  border-color: inherit;
+  position: relative;
+
+  &.rounded {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &.blurb::before {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    left: -0.45rem;
+    transform: rotate(45deg);
+    background-color: inherit;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: inherit;
+    content: "";
+  }
+
+  &.red {
+    background-color: lighten($color: $red, $amount: 40);
+  }
+
+  &.default {
+    background-color: lighten($color: $grey, $amount: 50);
+  }
+
+  &.blue {
+    background-color: lighten($color: $blue, $amount: 50);
+  }
+
+  &.green {
+    background-color: lighten($color: $green, $amount: 50);
+  }
 }
