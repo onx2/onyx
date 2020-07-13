@@ -41,6 +41,8 @@ $colors: (
   user-select: none;
   text-decoration: none;
 
+  @include color-modifiers;
+
   &:disabled {
     cursor: not-allowed;
     opacity: 0.675;
@@ -79,8 +81,6 @@ $colors: (
       border-radius: 100%;
     }
   }
-
-  @include color-modifiers;
 
   /* Size small styling */
   &.size-small {
