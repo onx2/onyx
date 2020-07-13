@@ -1,20 +1,15 @@
 <template>
   <nav>
     <ul>
-      <li>
-        <router-link to="/getting-started">Getting Started</router-link>
-      </li>
-      <li v-for="component in { ...components }" :key="component.name">
-        <router-link :to="`/${kebabCase(component.name)}`">{{
-          component.name
-        }}</router-link>
+      <li v-for="route in routes" :key="route.name">
+        <router-link :to="route">{{ route.name }}</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent, ref } from "vue"
 import { router } from "./router"
 import { kebabCase } from "lodash-es"
 import * as components from "../components"
@@ -22,12 +17,12 @@ import * as components from "../components"
 export default defineComponent({
   components: {},
   setup() {
-    console.log(router)
+    const routes = ref(router.getRoutes())
 
     return {
       components,
       kebabCase,
-      router
+      routes
     }
   }
 })

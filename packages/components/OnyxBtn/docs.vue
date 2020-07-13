@@ -101,6 +101,62 @@
           </onyx-surface>
         </onyx-grid-column>
       </onyx-grid-row>
+      <onyx-grid-row>
+        <onyx-grid-column>
+          <onyx-surface fill>
+            <onyx-surface-header>Fab</onyx-surface-header>
+            <onyx-surface-body>
+              <onyx-grid>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fab color="default">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab color="blue">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab color="red">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab color="green">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+              </onyx-grid>
+            </onyx-surface-body>
+          </onyx-surface>
+        </onyx-grid-column>
+      </onyx-grid-row>
+      <onyx-grid-row>
+        <onyx-grid-column>
+          <onyx-surface fill>
+            <onyx-surface-header>Fill</onyx-surface-header>
+            <onyx-surface-body>
+              <onyx-grid>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fill color="default">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fill color="blue">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fill color="red">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fill color="green">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+              </onyx-grid>
+            </onyx-surface-body>
+          </onyx-surface>
+        </onyx-grid-column>
+      </onyx-grid-row>
     </onyx-grid>
   </div>
 </template>
@@ -126,7 +182,6 @@ export default defineComponent({
     OnyxSurfaceHeader
   },
   setup() {
-    console.log(OnyxSurface)
     return {}
   }
 })

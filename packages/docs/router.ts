@@ -8,6 +8,14 @@ import {
 import { kebabCase } from "lodash-es"
 import * as components from "../components"
 
+const routeExclusionList = [
+  "OnyxSurfaceBody",
+  "OnyxSurfaceFooter",
+  "OnyxSurfaceHeader",
+  "OnyxGridRow",
+  "OnyxGridColumn"
+]
+
 const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/getting-started" },
   {
@@ -15,12 +23,14 @@ const routes: RouteRecordRaw[] = [
     component: (): Promise<ComponentOptions> => import("./GettingStarted.vue"),
     name: "Getting Started"
   },
-  ...Object.values(components).map((component) => ({
-    path: `/${kebabCase(component.name)}`,
-    name: component.name,
-    component: (): Promise<ComponentOptions> =>
-      import(`../components/${component.name}/docs.vue`)
-  }))
+  ...Object.values(components)
+    .filter((component) => !routeExclusionList.includes(component.name))
+    .map((component) => ({
+      path: `/${kebabCase(component.name)}`,
+      name: component.name,
+      component: (): Promise<ComponentOptions> =>
+        import(`../components/${component.name}/docs.vue`)
+    }))
 ]
 
 export const router: Router = createRouter({

@@ -4,6 +4,7 @@ import "./styles.scss"
 export namespace OnyxGirdRow {
   export type Props = {
     tag?: "div" | "main" | "section"
+    padding?: 0 | 1 | 2 | 3 | 4
   }
 }
 
@@ -13,6 +14,10 @@ export default defineComponent({
     tag: {
       type: String,
       default: "div"
+    },
+    padding: {
+      type: Number,
+      default: 2
     }
   },
   render(props) {

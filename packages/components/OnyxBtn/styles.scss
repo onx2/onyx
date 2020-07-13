@@ -5,7 +5,7 @@ $colors: (
   "blue": #2475c0
 );
 
-@mixin color-modifiers {
+@mixin button-color-modifiers {
   @each $name, $hex in $colors {
     &-#{$name} {
       color: #fff;
@@ -41,7 +41,7 @@ $colors: (
   user-select: none;
   text-decoration: none;
 
-  @include color-modifiers;
+  @include button-color-modifiers;
 
   &:disabled {
     cursor: not-allowed;
@@ -75,6 +75,9 @@ $colors: (
   &.fill {
     display: block;
     width: 100%;
+  }
+
+  &.fab {
     border-radius: 100%;
 
     .button-inner {
@@ -131,27 +134,27 @@ $colors: (
   }
 
   /* Elevation styling */
-  .elevation-0 {
+  &.elevation-0 {
     box-shadow: none;
     z-index: 0;
   }
 
-  .elevation-1 {
+  &.elevation-1 {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
 
-  .elevation-2 {
+  &.elevation-2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 2;
   }
 
-  .elevation-3 {
+  &.elevation-3 {
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
     z-index: 3;
   }
 
-  .elevation-4 {
+  &.elevation-4 {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 4;
   }
