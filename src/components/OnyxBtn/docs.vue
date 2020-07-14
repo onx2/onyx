@@ -120,9 +120,6 @@
                   <onyx-grid-column>
                     <onyx-btn fab color="green">I</onyx-btn>
                   </onyx-grid-column>
-                  <onyx-grid-column>
-                    <onyx-btn fab color="green">Iasdfasdfas</onyx-btn>
-                  </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
             </onyx-surface-body>

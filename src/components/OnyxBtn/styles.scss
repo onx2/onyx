@@ -1,8 +1,10 @@
+@import "../../styles/generic/colors";
+
 $colors: (
-  "default": #6c757d,
-  "red": #dc3545,
-  "green": #28a745,
-  "blue": #2475c0
+  "default": $grey,
+  "red": $red,
+  "green": $green,
+  "blue": $blue
 );
 
 @mixin button-color-modifiers {
