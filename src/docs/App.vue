@@ -1,5 +1,4 @@
 <template>
-  <div>asdf</div>
   <div class="wrapper">
     <navigation />
     <main class="content">
