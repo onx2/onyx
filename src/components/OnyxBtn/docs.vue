@@ -31,6 +31,9 @@
                   <onyx-grid-column>
                     <onyx-btn :elevation="6">Elevation 6</onyx-btn>
                   </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn :elevation="7">Elevation 7</onyx-btn>
+                  </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
             </onyx-surface-body>
@@ -45,16 +48,16 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn disabled color="default">asdf</onyx-btn>
+                    <onyx-btn disabled color="default">Disabled</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn disabled color="red">asdf</onyx-btn>
+                    <onyx-btn disabled color="red">Disabled</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn disabled color="blue">asdf</onyx-btn>
+                    <onyx-btn disabled color="blue">Disabled</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn disabled color="green">asdf</onyx-btn>
+                    <onyx-btn disabled color="green">Disabled</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -70,9 +73,6 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn size="xx-small">xx-small</onyx-btn>
-                  </onyx-grid-column>
-                  <onyx-grid-column>
                     <onyx-btn size="x-small">x-small</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
@@ -85,10 +85,7 @@
                     <onyx-btn size="large">large</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn size="x-large">x-large</onyx-btn>
-                  </onyx-grid-column>
-                  <onyx-grid-column>
-                    <onyx-btn size="xx-large">xx-large</onyx-btn>
+                    <onyx-btn size="x-large" flat>x-large</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -104,16 +101,16 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn color="default">asdf</onyx-btn>
+                    <onyx-btn color="default">default</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn color="blue">asdf</onyx-btn>
+                    <onyx-btn color="blue">blue</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn color="red">asdf</onyx-btn>
+                    <onyx-btn color="red">red</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn color="green">asdf</onyx-btn>
+                    <onyx-btn color="green">green</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -154,22 +151,43 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fill color="default">I</onyx-btn>
+                    <onyx-btn fill color="default">Fill</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fill color="blue">I</onyx-btn>
+                    <onyx-btn fill color="blue">Fill</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fill color="red">I</onyx-btn>
+                    <onyx-btn fill color="red">Fill</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fill color="green">I</onyx-btn>
+                    <onyx-btn fill color="green">Fill</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+              </onyx-grid>
+            </onyx-surface-body>
+          </onyx-surface>
+        </onyx-grid-column>
+      </onyx-grid-row>
+      <onyx-grid-row>
+        <onyx-grid-column>
+          <onyx-surface fill>
+            <onyx-surface-header>Links</onyx-surface-header>
+            <onyx-surface-body>
+              <onyx-grid>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn to="/onyx-surface">To OnyxSurface docs</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn href="http://www.google.com"
+                      >To Google.com</onyx-btn
+                    >
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>

@@ -9,6 +9,7 @@ export namespace OnyxSurface {
     fill?: boolean
     width?: number
     color?: keyof typeof Colors
+    blurb?: boolean
   }
 }
 

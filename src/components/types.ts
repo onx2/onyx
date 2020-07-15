@@ -6,13 +6,11 @@ export enum Colors {
 }
 
 export enum Sizes {
-  "xx-small" = "xx-small",
   "x-small" = "x-small",
   "small" = "small",
   "medium" = "medium",
   "large" = "large",
-  "x-large" = "x-large",
-  "xx-large" = "xx-large"
+  "x-large" = "x-large"
 }
 
 export enum Align {

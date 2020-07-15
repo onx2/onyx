@@ -3,15 +3,14 @@ import "./styles.scss"
 
 export namespace OnyxGridColumn {
   export type Props = {
-    size?: number | "auto"
+    size?: number
   }
 }
 export default defineComponent({
   name: "OnyxGridColumn",
   props: {
     size: {
-      type: Number as () => number,
-      default: "auto"
+      type: Number as () => number
     }
   },
   render() {
