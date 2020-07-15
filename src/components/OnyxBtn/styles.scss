@@ -1,4 +1,4 @@
-@import "../../styles/generic/colors";
+@import "../../styles/generic/_colors";
 
 $colors: (
   "default": $grey,
@@ -6,6 +6,43 @@ $colors: (
   "green": $green,
   "blue": $blue
 );
+
+$sizes: (
+  "xx-small": 0.75rem,
+  "x-small": 1rem,
+  "small": 1.25rem,
+  "medium": 1.5rem,
+  "large": 1.75rem,
+  "x-large": 2rem,
+  "xx-large": 2.25rem
+);
+
+$elevations: (0, 1, 2, 3, 4, 5, 6);
+
+@mixin button-elevation-modifiers {
+  @each $elevation in $elevations {
+    &-elevation-#{$elevation} {
+      box-shadow: 0 ($elevation * 2px) ($elevation * 4px) 0 rgba(0, 0, 0, 0.25);
+      z-index: $elevation;
+    }
+  }
+}
+
+@mixin button-size-modifiers {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      height: $size * 1.5;
+
+      &.fab {
+        width: $size * 1.5;
+      }
+
+      .button-inner {
+        padding: 0 ($size * 0.75);
+      }
+    }
+  }
+}
 
 @mixin button-color-modifiers {
   @each $name, $hex in $colors {
@@ -42,8 +79,11 @@ $colors: (
   color: black;
   user-select: none;
   text-decoration: none;
+  white-space: nowrap;
 
   @include button-color-modifiers;
+  @include button-size-modifiers;
+  @include button-elevation-modifiers;
 
   &:disabled {
     cursor: not-allowed;
@@ -54,7 +94,7 @@ $colors: (
     }
   }
   &:active {
-    transform: translateY(0.035rem) scale(0.995);
+    transform: scale(0.98);
   }
 
   .button-inner {
@@ -80,84 +120,10 @@ $colors: (
   }
 
   &.fab {
-    border-radius: 100%;
+    border-radius: 50%;
 
     .button-inner {
-      border-radius: 100%;
+      border-radius: 50%;
     }
-  }
-
-  /* Size small styling */
-  &.size-small {
-    height: 28px;
-    min-width: 50px;
-
-    &.fab {
-      width: 28px;
-      min-width: 28px;
-    }
-
-    .button-inner {
-      padding: 0 0.5rem;
-      font-size: 0.75rem;
-    }
-  }
-
-  /* Size medium styling */
-  &.size-medium {
-    height: 36px;
-    min-width: 64px;
-
-    &.fab {
-      width: 36px;
-      min-width: 36px;
-    }
-
-    .button-inner {
-      padding: 0 0.75rem;
-      font-size: 0.875rem;
-    }
-  }
-
-  /* Size large styling */
-  &.size-large {
-    height: 44px;
-    min-width: 78px;
-
-    &.fab {
-      width: 44px;
-      min-width: 44px;
-    }
-
-    .button-inner {
-      padding: 0 1rem;
-      font-size: 1rem;
-    }
-  }
-
-  /* Elevation styling */
-  &.elevation-0 {
-    box-shadow: none;
-    z-index: 0;
-  }
-
-  &.elevation-1 {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  &.elevation-2 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
-
-  &.elevation-3 {
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
-    z-index: 3;
-  }
-
-  &.elevation-4 {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 4;
   }
 }

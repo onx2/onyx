@@ -25,8 +25,8 @@ export default defineComponent({
   height: 100%;
 }
 .content {
-  margin-left: 200px;
-  padding: 8px;
+  padding: 8px 8px 8px 208px;
+  box-sizing: border-box;
   width: 100%;
 }
 </style>

@@ -1,4 +1,6 @@
 import { defineComponent, h, mergeProps } from "vue"
+import { getEnumKeys } from "../../utils"
+import { Colors } from "../types"
 import "./styles.scss"
 
 export namespace OnyxSurface {
@@ -6,7 +8,7 @@ export namespace OnyxSurface {
     rounded?: boolean
     fill?: boolean
     width?: number
-    color?: "red" | "blue" | "default" | "green"
+    color?: keyof typeof Colors
   }
 }
 
@@ -26,14 +28,17 @@ export default defineComponent({
     },
     color: {
       type: String,
-      defualt: "default"
+      default: "default",
+      validator: (prop: keyof typeof Colors): boolean =>
+        getEnumKeys(Colors).includes(prop)
     },
     blurb: {
-      type: Boolean
+      type: Boolean,
+      default: false
     }
   },
   render() {
-    const { color, fill, rounded, width } = this.$props as OnyxSurface.Props
+    const { color, fill, rounded, width }: OnyxSurface.Props = this.$props
 
     const child = h(
       "div",
@@ -41,7 +46,7 @@ export default defineComponent({
         class: {
           "surface-inner": true,
           rounded,
-          [color]: color
+          [color]: true
         }
       },
       this.$slots

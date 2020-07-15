@@ -8,20 +8,28 @@
             <onyx-surface-body>
               <onyx-grid>
                 <onyx-grid-row>
+                  <onyx-grid-column :size="2">
+                    <onyx-btn :elevation="0">Elevation 0</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column :size="2">
+                    <onyx-btn :elevation="1">Elevation 1</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column :size="2">
+                    <onyx-btn :elevation="2">Elevation 2</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column :size="2">
+                    <onyx-btn :elevation="3">Elevation 3</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+                <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn :elevation="0">asdf</onyx-btn>
+                    <onyx-btn :elevation="4">Elevation 4</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn :elevation="1">asdf</onyx-btn>
+                    <onyx-btn :elevation="5">Elevation 5</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn :elevation="2">asdf</onyx-btn>
-                  </onyx-grid-column>
-                  <onyx-grid-column>
-                    <onyx-btn :elevation="3">asdf</onyx-btn>
-                  </onyx-grid-column>
-                  <onyx-grid-column>
-                    <onyx-btn :elevation="4">asdf</onyx-btn>
+                    <onyx-btn :elevation="6">Elevation 6</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -31,7 +39,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill blurb>
+          <onyx-surface fill>
             <onyx-surface-header>Disabled</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -56,19 +64,31 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill color="green" blurb>
+          <onyx-surface fill>
             <onyx-surface-header>Sizes</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn size="small">asdf</onyx-btn>
+                    <onyx-btn size="xx-small">xx-small</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn size="medium">asdf</onyx-btn>
+                    <onyx-btn size="x-small">x-small</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn size="large">asdf</onyx-btn>
+                    <onyx-btn size="small">small</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="medium">medium</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="large">large</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="x-large">x-large</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="xx-large">xx-large</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -78,7 +98,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill color="red" blurb>
+          <onyx-surface fill>
             <onyx-surface-header>Colors</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>
@@ -103,7 +123,7 @@
       </onyx-grid-row>
       <onyx-grid-row>
         <onyx-grid-column>
-          <onyx-surface fill color="blue" blurb>
+          <onyx-surface fill>
             <onyx-surface-header>Fab</onyx-surface-header>
             <onyx-surface-body>
               <onyx-grid>

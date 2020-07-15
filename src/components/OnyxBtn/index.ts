@@ -1,16 +1,27 @@
-import { computed, defineComponent, h, mergeProps } from "vue"
+import { defineComponent, h, mergeProps } from "vue"
 import { RouterLink } from "vue-router"
+
+import { getEnumKeys } from "../../utils"
+import { Colors, Sizes } from "../types"
 import "./styles.scss"
+
+enum ButtonTypes {
+  button = "button",
+  submit = "submit",
+  reset = "reset"
+}
+
+type Elevations = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
 export namespace Button {
   export type Props = {
     disabled?: boolean
     fill?: boolean
     fab?: boolean
-    type?: "button" | "submit" | "reset"
-    color?: "default" | "red" | "blue" | "green"
-    size?: "small" | "medium" | "large"
-    elevation?: 0 | 1 | 2 | 3 | 4
+    type?: keyof typeof ButtonTypes
+    color?: keyof typeof Colors
+    size?: keyof typeof Sizes
+    elevation?: Elevations
     href?: string
     to?: string
   }
@@ -24,8 +35,10 @@ export default defineComponent({
       default: false
     },
     type: {
-      type: String,
-      default: "button"
+      type: String as () => Button.Props["type"],
+      default: ButtonTypes.button,
+      validator: (prop: keyof typeof ButtonTypes): boolean =>
+        getEnumKeys(ButtonTypes).includes(prop)
     },
     disabled: {
       type: Boolean,
@@ -36,16 +49,22 @@ export default defineComponent({
       default: false
     },
     color: {
-      type: String,
-      default: "default"
+      type: String as () => Button.Props["color"],
+      default: Colors.default,
+      validator: (prop: keyof typeof Colors): boolean =>
+        getEnumKeys(Colors).includes(prop)
     },
     size: {
-      type: String,
-      default: "medium"
+      type: String as () => Button.Props["size"],
+      default: Sizes.medium,
+      validator: (prop: keyof typeof Sizes): boolean =>
+        getEnumKeys(Sizes).includes(prop)
     },
     elevation: {
-      type: Number,
-      default: 0
+      type: Number as () => Elevations,
+      default: 0,
+      /** @todo Define a max elevation */
+      validator: (prop: Elevations): boolean => prop <= 6 && prop >= 0
     },
     href: {
       type: String
@@ -55,40 +74,41 @@ export default defineComponent({
     }
   },
   render() {
-    const { href, to, fill, fab, type, color, size, elevation } = this
-      .$props as Readonly<Button.Props>
+    const {
+      href,
+      to,
+      fill,
+      fab,
+      type,
+      color,
+      size,
+      elevation
+    }: Readonly<Button.Props> = this.$props
 
-    const classes = computed(() => {
-      const classArray = [
-        "button",
-        `size-${size}`,
-        `button-${color}`,
-        `elevation-${elevation}`
-      ]
-
-      if (fab) {
-        classArray.push("fab")
-      }
-      if (fill) {
-        classArray.push("fill")
-      }
-
-      return classArray.join(" ")
-    })
-
-    let component: any = "button"
+    let component = "button"
 
     if (href) {
       component = "a"
     } else if (to) {
-      component = RouterLink
+      /** @todo What is the correct typing? */
+      component = (RouterLink as unknown) as string
     }
 
     const child = h("span", { class: "button-inner" }, this.$slots)
 
     return h(
       component,
-      mergeProps(this.$props, { class: classes.value, type }),
+      mergeProps(this.$props, {
+        class: {
+          button: true,
+          [`button-${size}`]: true,
+          [`button-${color}`]: true,
+          [`button-elevation-${elevation}`]: true,
+          fill: fill && !fab,
+          fab
+        },
+        type
+      }),
       child
     )
   }
