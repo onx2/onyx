@@ -85,7 +85,7 @@
                     <onyx-btn size="large">large</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn size="x-large" flat>x-large</onyx-btn>
+                    <onyx-btn size="x-large">x-large</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>
@@ -167,6 +167,45 @@
                 <onyx-grid-row>
                   <onyx-grid-column>
                     <onyx-btn fill color="green">Fill</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+              </onyx-grid>
+            </onyx-surface-body>
+          </onyx-surface>
+        </onyx-grid-column>
+      </onyx-grid-row>
+      <onyx-grid-row>
+        <onyx-grid-column>
+          <onyx-surface fill>
+            <onyx-surface-header>Flat</onyx-surface-header>
+            <onyx-surface-body>
+              <onyx-grid>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn flat color="default">Flat</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn flat color="blue">Flat</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn flat color="red">Flat</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn flat color="green">Flat</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn fab flat color="default">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab flat color="blue">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab flat color="red">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn fab flat color="green">I</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
               </onyx-grid>

@@ -96,15 +96,6 @@ export default defineComponent({
     if (href) {
       component = "a"
     } else if (to) {
-      /** @todo
-       * What is the correct typing?
-       *
-       * Also I'm receiving error:
-       * "Non-function value encountered for default slot.
-       *  Prefer function slots for better performance."
-       *
-       * Potentially an issue with vue-router-next?
-       * */
       component = RouterLink
     }
 
