@@ -63,6 +63,7 @@ Currently in a pre-alpha state, theres a lot to do still. Here are few things in
 ## Todo
 
 - Improve documention _(More automation and standardization)_
+- Migrate docs to separate repo
 - Improve TypeScript declarations
 - Improve Accessibility _(Constant WIP)_
 - Export as ESM for library _(Waiting for Vite updates)_
