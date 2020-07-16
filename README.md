@@ -60,7 +60,7 @@ $ yarn dev
 
 Currently in a pre-alpha state, theres a lot to do still. Here are few things in no particular order...
 
-## TODOs
+## Todo
 
 - Improve documention _(More automation and standardization)_
 - Improve TypeScript declarations
@@ -71,3 +71,9 @@ Currently in a pre-alpha state, theres a lot to do still. Here are few things in
 - Tests
 - Themeing / Customization
 - Breakpoints / Tablet & Mobile friendliness
+
+## Notes
+
+Components are all written using render functions and `defineComponent`. Functional components have been given a rehaul in 3.x, but because there isn't really a performance benefit to writing them anymore this library won't use them.
+
+[Check out the RFC](https://github.com/vuejs/rfcs/blob/functional-async-api-change/active-rfcs/0007-functional-async-api-change.md#motivation)
