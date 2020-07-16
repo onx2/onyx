@@ -61,18 +61,3 @@ export default defineComponent({
     )
   }
 })
-
-// <input
-//     :id="id"
-//     :placeholder="placeholder"
-//     :required="required"
-//     :readonly="readonly"
-//     :disabled="disabled"
-//     class="input"
-//     :class="{ 'has-prefix': Boolean(slots.prefix), 'has-suffix': Boolean(slots.suffix) }"
-//     v-bind="attrs"
-//     v-model="content"
-//     @input="handleInput"
-//     @focus="setFocus(true)"
-//     @blur="setFocus(false)"
-// />

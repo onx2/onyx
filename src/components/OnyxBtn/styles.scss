@@ -146,8 +146,11 @@ $elevations: (0, 1, 2, 3, 4, 5, 6, 7);
     width: 100%;
   }
 
-  &.fab,
-  &::after {
+  &.fab {
     border-radius: 50%;
+
+    &::after {
+      border-radius: 50%;
+    }
   }
 }

@@ -13,7 +13,7 @@ enum ButtonTypes {
 
 type Elevations = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
-export namespace Button {
+export namespace OnyxButton {
   export type Props = {
     disabled?: boolean
     fill?: boolean
@@ -32,41 +32,37 @@ export default defineComponent({
   name: "OnyxBtn",
   props: {
     fill: {
-      type: Boolean,
-      default: false
+      type: Boolean
     },
     type: {
-      type: String as () => Button.Props["type"],
+      type: String,
       default: ButtonTypes.button,
       validator: (prop: keyof typeof ButtonTypes): boolean =>
         validatePropFromEnum(prop, ButtonTypes)
     },
     disabled: {
-      type: Boolean,
-      default: false
+      type: Boolean
     },
     fab: {
-      type: Boolean,
-      default: false
+      type: Boolean
     },
     flat: {
-      type: Boolean,
-      default: false
+      type: Boolean
     },
     color: {
-      type: String as () => Button.Props["color"],
+      type: String,
       default: Colors.default,
       validator: (prop: keyof typeof Colors): boolean =>
         validatePropFromEnum(prop, Colors)
     },
     size: {
-      type: String as () => Button.Props["size"],
+      type: String,
       default: Sizes.medium,
       validator: (prop: keyof typeof Sizes): boolean =>
         validatePropFromEnum(prop, Sizes)
     },
     elevation: {
-      type: Number as () => Elevations,
+      type: Number,
       default: 0,
       /** @todo Define a max elevation */
       validator: (prop: Elevations): boolean => prop <= 7 && prop >= 0
@@ -89,7 +85,7 @@ export default defineComponent({
       color,
       size,
       elevation
-    }: Readonly<Button.Props> = this.$props
+    }: Readonly<OnyxButton.Props> = this.$props
 
     let component: any = "button"
 
