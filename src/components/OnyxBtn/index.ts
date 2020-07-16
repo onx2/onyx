@@ -1,7 +1,7 @@
 import { defineComponent, h, mergeProps } from "vue"
 import { RouterLink } from "vue-router"
 
-import { getEnumKeys } from "../../utils"
+import { validatePropFromEnum } from "../../utils"
 import { Colors, Sizes } from "../types"
 import "./styles.scss"
 
@@ -39,7 +39,7 @@ export default defineComponent({
       type: String as () => Button.Props["type"],
       default: ButtonTypes.button,
       validator: (prop: keyof typeof ButtonTypes): boolean =>
-        getEnumKeys(ButtonTypes).includes(prop)
+        validatePropFromEnum(prop, ButtonTypes)
     },
     disabled: {
       type: Boolean,
@@ -57,13 +57,13 @@ export default defineComponent({
       type: String as () => Button.Props["color"],
       default: Colors.default,
       validator: (prop: keyof typeof Colors): boolean =>
-        getEnumKeys(Colors).includes(prop)
+        validatePropFromEnum(prop, Colors)
     },
     size: {
       type: String as () => Button.Props["size"],
       default: Sizes.medium,
       validator: (prop: keyof typeof Sizes): boolean =>
-        getEnumKeys(Sizes).includes(prop)
+        validatePropFromEnum(prop, Sizes)
     },
     elevation: {
       type: Number as () => Elevations,
@@ -93,10 +93,16 @@ export default defineComponent({
 
     let component: any = "button"
 
-    if (href) {
+    if (href && to) {
+      console.error(`"href" and "to" props shouldn't be used together.`)
+    } else if (href) {
       component = "a"
     } else if (to) {
       component = RouterLink
+    }
+
+    if (fab && fill) {
+      console.error(`"fill" and "fab" props shouldn't be used together`)
     }
 
     return h(

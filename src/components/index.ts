@@ -1,4 +1,5 @@
 export { default as OnyxBtn } from "./OnyxBtn"
+export { default as OnyxInput } from "./OnyxInput"
 export { default as OnyxGrid } from "./OnyxGrid"
 export { default as OnyxGridColumn } from "./OnyxGridColumn"
 export { default as OnyxGridRow } from "./OnyxGridRow"

@@ -138,6 +138,23 @@
                     <onyx-btn fab color="green">I</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
+                <onyx-grid-row>
+                  <onyx-grid-column>
+                    <onyx-btn size="x-small" fab color="default">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="small" fab color="default">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="medium" fab color="blue">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="large" fab color="red">I</onyx-btn>
+                  </onyx-grid-column>
+                  <onyx-grid-column>
+                    <onyx-btn size="x-large" fab color="green">I</onyx-btn>
+                  </onyx-grid-column>
+                </onyx-grid-row>
               </onyx-grid>
             </onyx-surface-body>
           </onyx-surface>
