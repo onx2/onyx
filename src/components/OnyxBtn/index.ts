@@ -13,7 +13,7 @@ enum ButtonTypes {
 
 type Elevations = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
-export namespace OnyxButton {
+export namespace OnyxBtn {
   export type Props = {
     disabled?: boolean
     fill?: boolean
@@ -85,7 +85,7 @@ export default defineComponent({
       color,
       size,
       elevation
-    }: Readonly<OnyxButton.Props> = this.$props
+    }: Readonly<OnyxBtn.Props> = this.$props
 
     let component: any = "button"
 
