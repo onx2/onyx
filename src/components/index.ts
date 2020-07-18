@@ -1,3 +1,5 @@
+// ts-lib allows for this style of export
+
 export { default as OnyxBtn } from "./OnyxBtn"
 export { default as OnyxInput } from "./OnyxInput"
 export { default as OnyxGrid } from "./OnyxGrid"
