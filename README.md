@@ -67,7 +67,6 @@ Currently in a pre-alpha state, theres a lot to do still. Here are few things in
 - Improve TypeScript declarations
 - Improve Accessibility _(Constant WIP)_
 - Export as ESM for library ~_(Waiting for Vite updates)_~ **Update** This is functional using a custom Rollup config.
-- Expand component library offerings
 - CI / CD
 - Tests
 - Themeing / Customization
