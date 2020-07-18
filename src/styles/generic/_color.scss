@@ -1,0 +1,72 @@
+$red-base: #b62130;
+$grey-base: #717579;
+$blue-base: #2a76be;
+$green-base: #28a745;
+$white-base: #ffffff;
+$black-base: #000000;
+
+$color: (
+  white: (
+    base: $white-base
+  ),
+  black: (
+    base: $black-base
+  ),
+  grey: (
+    base: $grey-base,
+    lighten1: lighten($grey-base, 10),
+    lighten2: lighten($grey-base, 20),
+    lighten3: lighten($grey-base, 30),
+    lighten4: lighten($grey-base, 40),
+    lighten5: lighten($grey-base, 50),
+    darken1: darken($grey-base, 10),
+    darken2: darken($grey-base, 20),
+    darken3: darken($grey-base, 30),
+    darken4: darken($grey-base, 40),
+    darken5: darken($grey-base, 50)
+  ),
+  red: (
+    base: $red-base,
+    lighten1: lighten($red-base, 10),
+    lighten2: lighten($red-base, 20),
+    lighten3: lighten($red-base, 30),
+    lighten4: lighten($red-base, 40),
+    lighten5: lighten($red-base, 50),
+    darken1: darken($red-base, 10),
+    darken2: darken($red-base, 20),
+    darken3: darken($red-base, 30),
+    darken4: darken($red-base, 40),
+    darken5: darken($red-base, 50)
+  ),
+  green: (
+    base: $green-base,
+    lighten1: lighten($green-base, 10),
+    lighten2: lighten($green-base, 20),
+    lighten3: lighten($green-base, 30),
+    lighten4: lighten($green-base, 40),
+    lighten5: lighten($green-base, 50),
+    darken1: darken($green-base, 10),
+    darken2: darken($green-base, 20),
+    darken3: darken($green-base, 30),
+    darken4: darken($green-base, 40),
+    darken5: darken($green-base, 50)
+  ),
+  blue: (
+    base: $blue-base,
+    lighten1: lighten($blue-base, 10),
+    lighten2: lighten($blue-base, 20),
+    lighten3: lighten($blue-base, 30),
+    lighten4: lighten($blue-base, 40),
+    lighten5: lighten($blue-base, 50),
+    darken1: darken($blue-base, 10),
+    darken2: darken($blue-base, 20),
+    darken3: darken($blue-base, 30),
+    darken4: darken($blue-base, 40),
+    darken5: darken($blue-base, 50)
+  )
+);
+
+@function clr($base, $shade: base) {
+  $color: map-get(map-get($color, $base), $shade);
+  @return $color;
+}
