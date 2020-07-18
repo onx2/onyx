@@ -1,7 +1,7 @@
 export enum Colors {
   red = "red",
   blue = "blue",
-  default = "default",
+  grey = "grey",
   green = "green"
 }
 
@@ -28,3 +28,5 @@ export enum Justify {
   "space-between" = "space-between",
   "space-around" = "space-around"
 }
+
+export type Elevations = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7

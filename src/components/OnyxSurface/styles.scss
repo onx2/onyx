@@ -1,4 +1,4 @@
-@import "../../styles/generic/colors";
+@import "../../styles/generic/color";
 
 .surface {
   display: inline-block;
@@ -23,19 +23,19 @@
     }
 
     &.red {
-      border-color: lighten($color: $red, $amount: 32);
+      border-color: clr(red, lighten3);
     }
 
-    &.default {
-      border-color: lighten($color: $grey, $amount: 45);
+    &.grey {
+      border-color: clr(grey, lighten3);
     }
 
     &.blue {
-      border-color: lighten($color: $blue, $amount: 40);
+      border-color: clr(blue, lighten3);
     }
 
     &.green {
-      border-color: lighten($color: $green, $amount: 35);
+      border-color: clr(green, lighten3);
     }
   }
 }

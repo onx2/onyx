@@ -1,4 +1,4 @@
-@import "../../styles/generic/colors";
+@import "../../styles/generic/color";
 
 .surface-header {
   display: flex;
@@ -30,18 +30,18 @@
   }
 
   &.red {
-    background-color: lighten($color: $red, $amount: 40);
+    background-color: clr(red, lighten5);
   }
 
-  &.default {
-    background-color: lighten($color: $grey, $amount: 50);
+  &.grey {
+    background-color: clr(grey, lighten5);
   }
 
   &.blue {
-    background-color: lighten($color: $blue, $amount: 50);
+    background-color: clr(blue, lighten5);
   }
 
   &.green {
-    background-color: lighten($color: $green, $amount: 50);
+    background-color: clr(green, lighten5);
   }
 }

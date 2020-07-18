@@ -29,7 +29,7 @@ export default defineComponent({
     },
     color: {
       type: String,
-      default: "default",
+      default: Colors.grey,
       validator: (prop: keyof typeof Colors): boolean =>
         getEnumKeys(Colors).includes(prop)
     },

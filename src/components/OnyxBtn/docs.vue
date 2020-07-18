@@ -48,7 +48,7 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn disabled color="default">Disabled</onyx-btn>
+                    <onyx-btn disabled color="grey">Disabled</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn disabled color="red">Disabled</onyx-btn>
@@ -101,7 +101,7 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn color="default">default</onyx-btn>
+                    <onyx-btn color="grey">grey</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn color="blue">blue</onyx-btn>
@@ -126,7 +126,7 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fab color="default">I</onyx-btn>
+                    <onyx-btn fab color="grey">I</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn fab color="blue">I</onyx-btn>
@@ -140,10 +140,10 @@
                 </onyx-grid-row>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn size="x-small" fab color="default">I</onyx-btn>
+                    <onyx-btn size="x-small" fab color="grey">I</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
-                    <onyx-btn size="small" fab color="default">I</onyx-btn>
+                    <onyx-btn size="small" fab color="grey">I</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn size="medium" fab color="blue">I</onyx-btn>
@@ -168,7 +168,7 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fill color="default">Fill</onyx-btn>
+                    <onyx-btn fill color="grey">Fill</onyx-btn>
                   </onyx-grid-column>
                 </onyx-grid-row>
                 <onyx-grid-row>
@@ -199,7 +199,7 @@
               <onyx-grid>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn flat color="default">Flat</onyx-btn>
+                    <onyx-btn flat color="grey">Flat</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn flat color="blue">Flat</onyx-btn>
@@ -213,7 +213,7 @@
                 </onyx-grid-row>
                 <onyx-grid-row>
                   <onyx-grid-column>
-                    <onyx-btn fab flat color="default">I</onyx-btn>
+                    <onyx-btn fab flat color="grey">I</onyx-btn>
                   </onyx-grid-column>
                   <onyx-grid-column>
                     <onyx-btn fab flat color="blue">I</onyx-btn>

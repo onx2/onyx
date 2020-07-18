@@ -1,10 +1,10 @@
-@import "../../styles/generic/_colors";
+@import "../../styles/generic/color";
 
-$colors: (
-  "default": $grey,
-  "red": $red,
-  "green": $green,
-  "blue": $blue
+$button-colors: (
+  "grey": $grey-base,
+  "red": $red-base,
+  "green": $green-base,
+  "blue": $blue-base
 );
 
 $sizes: (
@@ -47,7 +47,7 @@ $elevations: (0, 1, 2, 3, 4, 5, 6, 7);
 }
 
 @mixin button-color-modifiers {
-  @each $name, $hex in $colors {
+  @each $name, $hex in $button-colors {
     &-#{$name} {
       color: #fff;
       background-color: $hex;

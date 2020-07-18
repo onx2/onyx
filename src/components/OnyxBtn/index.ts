@@ -51,7 +51,7 @@ export default defineComponent({
     },
     color: {
       type: String,
-      default: Colors.default,
+      default: Colors.grey,
       validator: (prop: keyof typeof Colors): boolean =>
         validatePropFromEnum(prop, Colors)
     },
