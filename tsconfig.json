@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "ESNext",
+    "module": "esnext",
+    "target": "es2015",
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    // This isn't working right now
+    // "declaration": true,
     "sourceMap": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },

@@ -1,2 +1,13 @@
+# Distribution
 dist
+
+# Dependencies / Packages
 node_nodules
+
+# Configuration files
+.eslintrc.js
+.prettierrc.js
+vite.config.js
+
+#  Typescript declaration files
+*.d.ts

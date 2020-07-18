@@ -6,10 +6,10 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:vue/essential",
-    "plugin:prettier/recommended"
+    "plugin:vue/vue3-recommended",
+    "prettier",
+    "prettier/vue",
+    "prettier/@typescript-eslint"
   ],
   globals: {
     Atomics: "readonly",
@@ -20,7 +20,7 @@ module.exports = {
     parser: "@typescript-eslint/parser",
     sourceType: "module"
   },
-  plugins: ["vue", "@typescript-eslint"],
+  plugins: ["vue", "prettier", "@typescript-eslint"],
   rules: {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
